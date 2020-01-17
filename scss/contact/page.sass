@@ -1,0 +1,157 @@
+@charset "UTF-8"
+@import "../import.sass"
+
+#mainimg
+	margin-bottom: 70px
+	h2
+		img
+			max-width: 197px
+			object-fit: contain
+	@include mb
+		margin-bottom: 50px
+		h2
+			img
+				max-width: initial
+				max-height: 60px
+
+/*--------------------------------------------------- */
+/* #contact
+/*--------------------------------------------------- */
+#contact
+	margin-bottom: 100px
+	.banner
+		margin-bottom: 70px
+		img
+			max-width: 100%
+	h3
+		img
+			max-width: 277px
+			object-fit: contain
+			margin: auto
+			@include mb
+				max-width: 230px
+	p
+		@include rem(14)
+		max-width: 540px
+		margin: 40px auto
+		line-height: 1.5em
+	.flex
+		flex-wrap: wrap
+	.flex1,.flex2
+		padding: 18px 22px 17px
+		border-bottom: 1px solid #aaa
+		&:nth-of-type(1),&:nth-of-type(2)
+			border-top: 1px solid #aaa
+		&:nth-last-of-type(1),&:nth-last-of-type(2)
+			border-bottom: 0
+	.required
+		&:after
+			content: ""
+			/* style */
+			content: ''/*何も入れない*/
+			display: inline-block/*忘れずに！*/
+			width: 36px/*画像の幅*/
+			height: 22px/*画像の高さ*/
+			background-image: url(img/must.png)
+			background-size: contain
+			vertical-align: middle
+			background-repeat: no-repeat
+			position: absolute
+			top: 0
+			right: 17px
+			bottom: 0
+			margin: auto
+
+			/* style */
+
+	.flex1
+		width: 250px
+		position: relative
+		@include rem(18)
+		line-height: 1em
+		display: flex
+		align-items: center
+	.padding
+		align-items: baseline
+		padding-top: 26px
+		&.required:after
+			bottom: auto
+			top: 23px
+	.flex2
+		width: calc(100% - 250px)
+		@include rem(14)
+		input,textarea
+			border: 1px solid #888
+			background-color: #eee
+			padding: 8px
+			width: 100%
+		label
+			&:nth-of-type(1)
+				input
+					margin-bottom: 10px
+				/* style */
+			input
+				position: relative
+				top: 2px
+				width: auto
+	.red
+		color: #C71A01
+		margin-top: 10px
+	.btn
+		@include btn-btn(#A0875C,#fff)
+		cursor: pointer
+		height: 45px
+		max-width: 132px
+		@include rem(22)
+		font-weight: 700
+		margin: 50px auto 0
+		line-height: 1em
+		@include tabup
+			padding-top: 4px
+		input
+			height: 100%
+
+/*--------------------------------------------------- */
+/* レスポンシブ
+/*--------------------------------------------------- */
+@include tab
+	/*--------------------------------------------------- */
+	/* #contact
+	/*--------------------------------------------------- */
+	#contact
+		margin-bottom: 100px
+		.banner
+			margin-bottom: 50px
+		.flex1,.flex2
+			padding: 24px 0
+			border-bottom: 1px solid #aaa
+			&:nth-of-type(1),&:nth-of-type(2)
+				border-top: 0
+			&:nth-last-of-type(1),&:nth-last-of-type(2)
+				border-bottom: 0
+		@include mb
+			p
+				margin: 30px auto 10px
+		.required
+			&:after
+
+				position: relative
+				right: auto
+				margin-left: 8px
+
+
+		.flex1
+			width: 100%
+
+			border-bottom: 0
+			padding-bottom: 0
+		.padding
+			align-items: center
+			&.required:after
+				bottom: auto
+				top: 0
+		.flex2
+			width: calc(100%)
+			padding-top: 8px
+
+@include thanksMail

@@ -1,0 +1,300 @@
+@charset "UTF-8"
+
+@import "../../_import.sass"
+
+
+/* -------------------------------------------------- */
+/* 共通ヘッダー 
+/*-------------------------------------------------- */
+header
+	margin: 20px auto 0
+	left: 0
+	right: 0
+	top: 0
+	z-index: 10
+	width: 100%
+	color: $color-nav
+	@include tab
+		margin: 16px auto 16px
+
+	.flex
+		max-width: $pcsmall
+
+		justify-content: space-between
+		display: flex
+		align-items: center
+		align-content: space-between
+		@include mb
+			padding-left: 10px
+			padding-right: 10px
+
+	.flex2
+		&:nth-of-type(1)
+			width: calc(100% - 660px)
+			min-width: 190px
+			img
+				width: 155px
+			h1
+				display: inline-block
+		&:nth-of-type(2)
+			max-width: 420px
+			width: 100%
+
+
+		&:nth-of-type(3)
+			width: 240px
+			min-width: 240px
+
+			position: relative
+			img
+				width: 220px
+				margin-left: auto
+				position: relative
+			&:before
+				content: ''/*何も入れない*/
+				position: absolute
+				display: inline-block/*忘れずに！*/
+				width: 220px/*画像の幅*/
+				height: 50px/*画像の高さ*/
+				background-image: url(../../common/img/head-contact2.png)
+				background-size: contain
+				vertical-align: middle
+				background-repeat: no-repeat
+				z-index: -2
+				right: 0
+
+
+	.address
+
+		p
+			@include rem(15)
+			width: 100%
+			padding-bottom: 4px
+			@include pcsmallup
+				line-height: 1em
+				padding-bottom: 8px
+		.flexChild
+			display: flex
+			align-content: center
+			justify-content: space-between
+			align-items: center
+
+			div
+				&:nth-of-type(1)
+					padding: 3px 16px
+					color: #fff
+					background: #A0875C
+					border-radius: 30px
+					@include rem(14)
+					min-width: 110px
+
+			.tel
+				text-align: right
+				max-width: 237px
+				img
+					max-width: 237px
+					width: 100%
+					margin-left: auto
+	.navi
+		width: 100%
+		border-top: 1px solid #ddd
+		margin-top: 20px
+		.max-width
+			margin: auto
+
+	.navFlex
+		height: 45px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		li
+			width: 100%
+			height: 100%
+			position: relative
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: 4px 0 0
+			&:before,&:nth-of-type(5)::after
+				/* style */
+				content: ''/*何も入れない*/
+				display: inline-block/*忘れずに！*/
+				width: 1px/*画像の幅*/
+				height: 45px/*画像の高さ*/
+				background-image: url(../../common/img/nav-line.png)
+				background-size: contain
+				vertical-align: middle
+				background-repeat: no-repeat
+				position: absolute
+				left: 0
+				top: 0
+				z-index: -2
+				/* style */
+			&:nth-of-type(5)::after
+				left: auto
+				right: 0
+		a
+			height: 90%
+			width: 90%
+			display: flex
+			align-items: center
+			justify-content: center
+			@include rem(16)
+			@include nav-link
+
+
+		.navTel,.navMail
+			@include tabup
+				display: none
+	
+
+
+
+
+// 固定ヘッダー
+header.white
+	@include fixHead
+
+
+@include tabup
+	#nav_toggle
+		display: none
+
+//ナビゲーションメニュー
+@include tab
+	@include navi2(#fff,#333,0.95)
+
+
+
+
+/* -------------------------------------------------- */
+/* レスポンシブ
+/*-------------------------------------------------- */
+
+@include tab
+
+
+	header
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+
+		.flex2
+			&:nth-of-type(1)
+				min-width: 190px
+				img
+					@include mb
+						max-width: 100px
+						width: 100%
+
+			&:nth-of-type(2)
+				display: none
+
+			&:nth-of-type(3)
+				display: none
+		#nav_toggle
+			margin-left: auto
+
+		.navi
+			width: 80px
+			border-top: 0
+			margin-left: auto
+			margin-top: 0
+			.max-width
+				margin-left: auto
+
+		.navFlex
+			height: 45px
+			display: flex
+			flex-wrap: wrap
+			li
+				width: 100%
+				height: 100%
+				position: relative
+				display: flex
+				align-items: center
+				justify-content: center
+				padding: 4px 0 
+				&:before,&:nth-of-type(5)::after
+					display: none
+			a
+				height: 90%
+				width: 950%
+				display: flex
+				align-items: center
+				justify-content: center
+				@include rem(16)
+				@include nav-link
+				@include ie
+					&:hover
+						color: #fff
+		$navPad: 22px
+		.navTel
+			a:visited
+				color: #fff
+			@include btn(#C81B02,#fff)
+			margin: 10px 0 24px
+			a
+				width: 50%
+				padding-top: $navPad
+				padding-bottom: $navPad
+		.navMail
+			a:visited
+				color: #fff
+			@include btn($color-accent,#fff)
+			a
+				width: 50%
+				padding-top: $navPad
+				padding-bottom: $navPad
+		@include mb
+
+			.navi
+				width: 80px
+
+
+			.navFlex
+				height: 40px
+
+				li
+
+					padding: 0 
+					&:before,&:nth-of-type(5)::after
+						display: none
+				a
+					height: 90%
+					width: 950%
+					display: flex
+					align-items: center
+					justify-content: center
+					@include rem(16)
+					@include nav-link
+					@include ie
+						&:hover
+							color: #fff
+
+			.navTel
+
+				@include btn(#C81B02,#fff)
+				margin: 10px 0 24px
+				a
+					width: calc(100% - 40px)
+					height: 40px
+					padding-top: $navPad
+					padding-bottom: $navPad
+				a:visited
+					color: #fff
+
+				
+			.navMail
+				a:visited
+					color: #fff
+				@include btn($color-accent,#fff)
+				a
+					height: 40px
+					width: calc(100% - 40px)
+					padding-top: $navPad
+					padding-bottom: $navPad
+
+
+

@@ -1,0 +1,313 @@
+@charset "UTF-8";
+.hvr-icon-up {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0); }
+  .hvr-icon-up .hvr-icon {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); }
+  .hvr-icon-up:hover .hvr-icon, .hvr-icon-up:focus .hvr-icon, .hvr-icon-up:active .hvr-icon {
+    -webkit-animation-name: hvr-icon-up;
+    animation-name: hvr-icon-up;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+
+/*--------------------------------------------------- */
+/* footer */
+/*--------------------------------------------------- */
+footer a {
+  color: #fff; }
+  footer a:visited {
+    color: #fff; }
+  footer a:hover {
+    color: #ccc; }
+
+#footGoto {
+  position: fixed;
+  right: 8px;
+  bottom: 8px; }
+  #footGoto a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #A0875C;
+    background: #fff;
+    font-size: 12px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    opacity: 0.9;
+    padding: 1.7em 0 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif; }
+    #footGoto a:before {
+      font-family: "Font Awesome 5 Free";
+      content: '\f102';
+      font-weight: 700;
+      position: absolute;
+      top: 0.5em;
+      font-size: 22px;
+      font-size: 2.2rem; }
+      @media all and (-ms-high-contrast: none) {
+        #footGoto a:before {
+          left: 50%;
+          -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0); } }
+    #footGoto a:hover {
+      opacity: 0.7;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s; }
+  @media (max-width: 768px) {
+    #footGoto a {
+      width: 50px;
+      height: 50px; }
+      #footGoto a span {
+        display: none; }
+      #footGoto a:before {
+        top: 0.5em;
+        font-size: 24px;
+        font-size: 2.4rem; } }
+
+/*--------------------------------------------------- */
+/* inquiry */
+/*--------------------------------------------------- */
+#inquiry {
+  margin-top: 50px;
+  margin-bottom: 70px; }
+  #inquiry div {
+    position: relative; }
+  #inquiry .hoverImg, #inquiry .hover {
+    max-width: 292px;
+    width: 100%;
+    position: absolute;
+    bottom: 13px;
+    margin: auto;
+    z-index: 3; }
+  #inquiry .hover {
+    z-index: -1;
+    bottom: 0; }
+  #inquiry .inqLeft {
+    left: 25.5%; }
+  #inquiry .inqRight {
+    right: 131px; }
+  @media (max-width: 1000px) {
+    #inquiry .inqLeft, #inquiry .inqRight {
+      max-width: 200px;
+      bottom: 13px; }
+    #inquiry .inqLeft {
+      left: 25.5%; }
+    #inquiry .inqRight {
+      right: 131px; } }
+
+/*--------------------------------------------------- */
+/* #foot */
+/*--------------------------------------------------- */
+#foot {
+  padding: 27px 0;
+  background-color: #A0875C; }
+  #foot h2 img {
+    max-width: 142px; }
+  #foot address {
+    color: #fff;
+    font-size: 13px;
+    font-size: 1.3rem;
+    line-height: 1.2em; }
+    #foot address img {
+      max-width: 257px; }
+    #foot address p {
+      margin: 10px 0 8px;
+      font-style: normal;
+      font-weight: 400; }
+  #foot .flex {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    #foot .flex .flex2:nth-of-type(1) {
+      /* style */
+      width: calc(100% - 470px); }
+    #foot .flex .flex2:nth-of-type(2) {
+      width: 470px; }
+  #foot .flexChild {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: justify;
+    align-content: space-between; }
+    #foot .flexChild .flexChild2 {
+      width: 100%; }
+  #foot ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    #foot ul li {
+      width: calc(33.333% - 13px);
+      font-size: 15px;
+      font-size: 1.5rem; }
+  #foot .copyright {
+    font-size: 15px;
+    font-size: 1.5rem;
+    color: #fff; }
+
+/*--------------------------------------------------- */
+/* レスポンシブ */
+/*--------------------------------------------------- */
+@media (max-width: 768px) {
+  /*--------------------------------------------------- */
+  /* inquiry */
+  /*--------------------------------------------------- */
+  #inquiry {
+    margin-top: 70px;
+    margin-bottom: 70px; }
+    #inquiry h2 img {
+      display: none; }
+    #inquiry .inqLeft, #inquiry .inqRight {
+      position: relative;
+      bottom: auto;
+      max-width: initial;
+      margin: 0; }
+    #inquiry .inqLeft {
+      left: auto; }
+    #inquiry .inqRight {
+      right: auto; }
+    #inquiry .pcInvi {
+      border-bottom: 1px dashed #aaa;
+      margin-bottom: 16px;
+      padding-bottom: 16px; }
+      #inquiry .pcInvi h2 {
+        font-family: "matissem", "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+        font-weight: 400;
+        font-size: 20px;
+        font-size: 2rem;
+        margin-bottom: 24px; }
+    #inquiry .outer {
+      border: 1px solid #aaa;
+      padding: 24px;
+      text-align: left; }
+    #inquiry .every {
+      padding: 3px 16px;
+      color: #fff;
+      background: #A0875C;
+      border-radius: 30px;
+      font-size: 14px;
+      font-size: 1.4rem;
+      margin-right: 16px; }
+    #inquiry .flexChild2:nth-of-type(2) {
+      width: calc(100% - 180px); }
+    #inquiry .wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      #inquiry .wrapper div {
+        width: calc(50% - 10px); }
+      #inquiry .wrapper img {
+        max-width: initial; } }
+  @media (max-width: 768px) and (max-width: 480px) {
+    #inquiry .pcInvi {
+      margin-bottom: 16px;
+      padding-bottom: 16px; }
+      #inquiry .pcInvi h2 {
+        font-size: 18px;
+        font-size: 1.8rem;
+        margin-bottom: 16px;
+        line-height: 1.2em; }
+    #inquiry .outer {
+      border: 1px solid #aaa;
+      padding: 16px;
+      text-align: left; }
+    #inquiry .every {
+      width: calc(100% - 40px);
+      text-align: center;
+      margin: 0 auto 16px; }
+    #inquiry .flexChild {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+    #inquiry .flexChild2 {
+      width: 100%; }
+      #inquiry .flexChild2:nth-of-type(2) {
+        width: calc(100%); }
+    #inquiry .wrapper {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      #inquiry .wrapper div {
+        width: calc(100%); }
+        #inquiry .wrapper div:nth-of-type(1) {
+          margin-bottom: 16px;
+          /* style */ }
+      #inquiry .wrapper img {
+        max-width: initial; } }
+
+@media (max-width: 768px) {
+  /*--------------------------------------------------- */
+  /* #foot */
+  /*--------------------------------------------------- */
+  #foot {
+    padding: 40px 0; }
+    #foot h2 img {
+      margin: auto; }
+    #foot address {
+      margin-bottom: 40px;
+      font-size: 13px;
+      font-size: 1.3rem; }
+      #foot address img {
+        margin: auto; }
+      #foot address p {
+        margin: 16px 0 16px;
+        text-align: center; }
+    #foot .flex {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-align: center; }
+      #foot .flex .flex2:nth-of-type(1) {
+        /* style */
+        width: calc(100%); }
+      #foot .flex .flex2:nth-of-type(2) {
+        width: 100%; }
+    #foot .flexChild {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-line-pack: justify;
+      align-content: space-between; }
+      #foot .flexChild .flexChild2 {
+        width: 100%; }
+    #foot ul {
+      margin-bottom: 30px; }
+      #foot ul li {
+        width: calc(33.333% - 13px);
+        font-size: 15px;
+        font-size: 1.5rem; } }
+    @media (max-width: 768px) and (max-width: 480px) {
+      #foot ul {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: left; }
+        #foot ul li {
+          width: calc(50% - 10px);
+          padding-left: 20px; } }
+
+@media (max-width: 768px) {
+    #foot .copyright {
+      font-size: 15px;
+      font-size: 1.5rem;
+      color: #fff; } }

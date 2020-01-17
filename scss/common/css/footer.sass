@@ -1,0 +1,248 @@
+@charset "UTF-8"
+
+@import "../../_import.sass"
+
+/*--------------------------------------------------- */
+/* footer
+/*--------------------------------------------------- */
+footer
+	a
+		@include foot-link
+
+
+#footGoto 
+	@include footGoto 
+
+/*--------------------------------------------------- */
+/* inquiry
+/*--------------------------------------------------- */
+#inquiry
+	margin-top: 50px
+	margin-bottom: 70px
+	div
+		position: relative
+	.hoverImg,.hover
+		max-width: 292px
+		width: 100%
+		position: absolute
+		bottom: 13px
+		margin: auto
+		z-index: 3
+	.hover
+		z-index: -1
+		bottom: 0
+	.inqLeft
+		left: 25.5%
+	.inqRight
+		right: 131px
+
+	@include pcsmall
+
+		.inqLeft,.inqRight
+			max-width: 200px
+			bottom: 13px
+		.inqLeft
+			left: 25.5%
+		.inqRight
+			right: 131px
+
+
+/*--------------------------------------------------- */
+/* #foot
+/*--------------------------------------------------- */
+
+#foot
+	padding: 27px 0
+	background-color: $color-main
+	h2
+		img
+			max-width: 142px
+
+	address
+		color: #fff
+		@include rem(13)
+		line-height: 1.2em
+
+		img
+			max-width: 257px
+		p
+			margin: 10px 0 8px
+			font-style: normal
+			font-weight: 400
+	.flex
+		justify-content: space-between
+		.flex2
+			&:nth-of-type(1)
+				/* style */
+				width: calc(100% - 470px)
+			&:nth-of-type(2)
+				width: 470px
+
+	.flexChild
+		flex-wrap: wrap
+		align-content: space-between
+		.flexChild2
+			width: 100%
+	ul
+		display: flex
+		flex-wrap: wrap
+		li
+			width: calc(33.333% - 13px)
+			@include rem(15)
+	.copyright
+		@include rem(15)
+		color: $color-foot
+
+
+
+
+
+
+
+
+/*--------------------------------------------------- */
+/* レスポンシブ
+/*--------------------------------------------------- */
+
+@include tab
+	/*--------------------------------------------------- */
+	/* inquiry
+	/*--------------------------------------------------- */
+	#inquiry
+		margin-top: 70px
+		margin-bottom: 70px
+		h2
+			img
+				display: none
+
+		.inqLeft,.inqRight
+			position: relative
+			bottom: auto
+			max-width: initial
+			margin: 0
+		.inqLeft
+			left: auto
+		.inqRight
+			right: auto
+		.pcInvi
+			border-bottom: 1px dashed #aaa
+			margin-bottom: 16px
+			padding-bottom: 16px
+			h2
+				font-family: $font-family-matissem
+				font-weight: 400
+				@include rem(20)
+				margin-bottom: 24px
+		.outer
+			border: 1px solid #aaa
+			padding: 24px
+			text-align: left
+
+		.every
+			padding: 3px 16px
+			color: #fff
+			background: #A0875C
+			border-radius: 30px
+			@include rem(14)
+			margin-right: 16px
+		.flexChild2
+			&:nth-of-type(2)
+				width: calc(100% - 180px)
+		.wrapper
+			display: flex
+			justify-content: space-between
+			div
+				width: calc(50% - 10px)
+			img
+				max-width: initial
+		@include mb
+			$pad: 16px
+
+			.pcInvi
+				margin-bottom: $pad
+				padding-bottom: $pad
+
+				h2
+					@include rem(18)
+					margin-bottom: 16px
+					line-height: 1.2em
+			.outer
+				border: 1px solid #aaa
+				padding: $pad
+				text-align: left
+
+			.every
+				width: calc(100% - 40px)
+				text-align: center
+				margin: 0 auto 16px
+			.flexChild
+				flex-wrap: wrap
+			.flexChild2
+				width: 100%
+				&:nth-of-type(2)
+					width: calc(100%)
+			.wrapper
+				flex-wrap: wrap
+
+				div
+					width: calc(100%)
+					&:nth-of-type(1)
+						margin-bottom: $pad
+						/* style */
+				img
+					max-width: initial
+
+
+
+
+	/*--------------------------------------------------- */
+	/* #foot
+	/*--------------------------------------------------- */
+
+	#foot
+		padding: 40px 0
+		h2
+			img
+				margin: auto
+
+		address
+			margin-bottom: 40px
+			@include rem(13)
+
+			img
+				margin: auto
+			p
+				margin: 16px 0 16px
+				text-align: center
+		.flex
+			flex-wrap: wrap
+			justify-content: center
+			text-align: center
+
+			.flex2
+				&:nth-of-type(1)
+					/* style */
+					width: calc(100%)
+				&:nth-of-type(2)
+					width: 100%
+
+		.flexChild
+			flex-wrap: wrap
+			align-content: space-between
+			.flexChild2
+				width: 100%
+		ul
+			margin-bottom: 30px
+			li
+				width: calc(33.333% - 13px)
+				@include rem(15)
+			@include mb
+				justify-content: center
+				text-align: left
+				li
+					width: calc(50% - 10px)
+					padding-left: 20px
+
+		.copyright
+			@include rem(15)
+			color: $color-foot
