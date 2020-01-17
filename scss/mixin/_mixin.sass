@@ -50,3 +50,16 @@ $mb: 480px  // スマホ
     @content
   @supports (-ms-ime-align: auto)
     @content
+@mixin ie11
+  @media all and (-ms-high-contrast: none)
+    @content
+@mixin ipad
+  .ipad
+    @content
+
+@mixin mediaMax($mediaMax) 
+  @media (max-width: ($mediaMax)) 
+    @content
+@mixin mediaMin($mediaMin) 
+  @media (min-width: ($mediaMin)) 
+    @content
