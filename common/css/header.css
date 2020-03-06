@@ -461,8 +461,9 @@ header.white {
     }
   }
   header .navTel {
-    width: 300px;
-    height: 46px;
+    width: 100%;
+    height: auto;
+    max-width: 200px;
     margin: 10px 0 24px;
   }
   header .navTel a:visited {
@@ -480,7 +481,6 @@ header.white {
     text-align: center;
     border: 1px solid #C81B02;
     color: #fff;
-    font-size: 18px;
     transition: all 0.5s ease;
   }
   header .navTel a:hover {
@@ -495,8 +495,9 @@ header.white {
     padding-bottom: 22px;
   }
   header .navMail {
-    width: 300px;
-    height: 46px;
+    width: 100%;
+    height: auto;
+    max-width: 200px;
   }
   header .navMail a:visited {
     color: #fff;
@@ -513,7 +514,6 @@ header.white {
     text-align: center;
     border: 1px solid #F8B400;
     color: #fff;
-    font-size: 18px;
     transition: all 0.5s ease;
   }
   header .navMail a:hover {
@@ -571,8 +571,9 @@ header.white {
     }
   }
   header .navTel {
-    width: 300px;
-    height: 46px;
+    width: 100%;
+    height: auto;
+    max-width: 200px;
     margin: 10px 0 24px;
   }
   header .navTel a {
@@ -587,7 +588,6 @@ header.white {
     text-align: center;
     border: 1px solid #C81B02;
     color: #fff;
-    font-size: 18px;
     transition: all 0.5s ease;
   }
   header .navTel a:hover {
@@ -606,8 +606,9 @@ header.white {
     color: #fff;
   }
   header .navMail {
-    width: 300px;
-    height: 46px;
+    width: 100%;
+    height: auto;
+    max-width: 200px;
   }
   header .navMail a:visited {
     color: #fff;
@@ -624,7 +625,6 @@ header.white {
     text-align: center;
     border: 1px solid #F8B400;
     color: #fff;
-    font-size: 18px;
     transition: all 0.5s ease;
   }
   header .navMail a:hover {
